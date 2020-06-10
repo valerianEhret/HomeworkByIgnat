@@ -1,0 +1,49 @@
+.wrapper {
+    position: absolute;
+    border: 1px solid black;
+    width: 300px;
+    height: 70px;
+    background-color: rgb(100 144 177);
+}
+
+.avatar {
+    position: absolute;
+    width: 20%;
+    top:0;
+    left: 0;
+    background-color: green;
+}
+
+
+.avatar img {
+    width:40px;
+    position: absolute;
+    left: 5px;
+    top:20px;
+    border-radius: 100px;
+    border: 1px solid black;
+    box-shadow: 0 0 7px #666;
+}
+
+.post {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px 20px 20px 0;
+}
+
+.time {
+    position: absolute;
+    right: 10px;
+    bottom: 35px;
+    color: grey;
+}
+
+.name {
+    font-weight: 700;
+    color: rgb(58 109 153);
+}
