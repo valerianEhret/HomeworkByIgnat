@@ -7,7 +7,9 @@ type MessagePropsType = {
 }
 
 
+
 export function Message(props:MessagePropsType) {
+    debugger
     return (
         <div className={classes.wrapper}>
             <div className={classes.avatar}>
@@ -15,8 +17,8 @@ export function Message(props:MessagePropsType) {
             </div>
             <div className={classes.post}>
                 <div className={classes.name}>{props.name}</div>
-                <div className={classes.text}>{props.text}</div>
                 <div className={classes.time}>{props.time}</div>
+                <div className={classes.text}>{props.text}</div>
             </div>
         </div>
 
