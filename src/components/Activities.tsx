@@ -3,27 +3,24 @@ import classes from "./Activities.module.css"
 import {FilterValuesType} from "../App";
 
 export type TasksType = {
-    id: number
+    id: string
     n: string
     scale: number
 }
 
 type PropsType = {
     activities: Array<TasksType>
-    removeActivity: (id:number) => void
+    removeActivity: (id:string) => void
     changeFilter: (value:FilterValuesType) => void
 }
 
 export function Activities(props: PropsType) {
+
     return (
         <div>
             <div className={classes.title}>
                 <h3>Acitivities</h3>
             </div>
-            {/*<div>*/}
-            {/*    <input type="text"/>*/}
-            {/*    <button>add</button>*/}
-            {/*</div>*/}
             <div>
                 <ul>
                     {

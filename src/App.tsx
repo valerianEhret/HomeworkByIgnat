@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import './App.css';
 import { Message } from "./components/Message";
 import {Activities, TasksType} from "./components/Activities"
+import {v1} from "uuid";
+import {List, NamesType} from "./components/List";
+
 
 export type FilterValuesType = "all" | "low" | "middle" | "hight";
 
@@ -9,24 +12,44 @@ export type FilterValuesType = "all" | "low" | "middle" | "hight";
 
 
 function App() {
-  let messages = [
-    {name: "Valerian Ehret", text: "Hello World!!!", time: "12:05"}
-  ];
+
+    let [names,setNames ] = useState<Array<NamesType>>(
+        []);
+
+
+    function addName(value:string) {
+        let newName = {id:v1(), name: value};
+        let newNames = [newName, ...names];
+        setNames(newNames)
+    }
+
+    function removeNames(id:string) {
+        let filteredNames = names.filter( el => el.id !== id)
+        setNames(filteredNames);
+    }
+
+    function greeting(value:string) {
+        alert("Welcome  " + value + " !!!" )
+    }
+
+
+
+
 
 
   let [activities, setActivity] = useState<Array<TasksType>>([
-    { id: 1, n: "job",scale:6 },
-    { id: 2, n: "party",scale:6 },
-    { id: 3, n: "games", scale:2 },
-    { id: 4, n: "react", scale: 10 },
-    { id: 5, n: "html", scale: 5 },
-    { id: 6, n: "js", scale: 8 },
-    { id: 7, n: "family",scale: 10 },
+    { id: v1(), n: "job",scale:6 },
+    { id: v1(), n: "party",scale:6 },
+    { id: v1(), n: "games", scale:2 },
+    { id: v1(), n: "react", scale: 10 },
+    { id: v1(), n: "html", scale: 5 },
+    { id: v1(), n: "js", scale: 8 },
+    { id: v1(), n: "family",scale: 10 },
   ]);
 
   let [filter, setFiler] = useState<FilterValuesType>("all")
 
-   function removeActivity(id:number) {
+   function removeActivity(id:string) {
      let filteredActivities = activities.filter( a => a.id !== id)
      setActivity(filteredActivities)
    }
@@ -53,10 +76,17 @@ function App() {
       <Activities activities={activitiesForActivities}
                   removeActivity = {removeActivity}
                   changeFilter={changeFilter}
-
       />
      </div>
       <div>
+          <List  names={names}
+                 removeNames={removeNames}
+                 addName={addName}
+                 greeting={greeting}
+          />
+
+
+
         <Message
             name="Valerian Ehret"
                  text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem

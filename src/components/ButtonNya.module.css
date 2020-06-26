@@ -1,0 +1,12 @@
+.buttonNya {
+    display: block;
+    margin: 10px;
+    background: #f69a73;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    line-height: 35px;
+    width: 242px;
+    padding: 0 20px;
+}
