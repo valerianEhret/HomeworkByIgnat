@@ -3,6 +3,9 @@
   /*text-align: center;*/
   display: grid;
   grid-auto-rows: 2fr 10fr;
+  /*position: relative;*/
+  overflow: hidden;
+  /*background-color: bisque;*/
 }
 
 .Activity {

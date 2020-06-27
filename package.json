@@ -1,6 +1,5 @@
 {
   "name": "my-app",
-
   "homepage": "http://valerianEhret.github.io/HomeworkByIgnat/",
   "version": "0.1.0",
   "private": true,
@@ -12,9 +11,12 @@
     "@types/node": "^12.12.46",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^8.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-app": "^0.1.6",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5",
     "uuid": "^8.1.0"

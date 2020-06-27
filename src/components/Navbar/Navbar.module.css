@@ -1,0 +1,39 @@
+.menu {
+    background-color: #d87d56;
+    border-radius: 5px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 50px;
+    position: fixed;
+    width: 100%;
+    /*display: block;*/
+    /*position: fixed;*/
+    /*list-style:none;*/
+    /*padding: 10px;*/
+    /*margin: 0;*/
+    /*box-sizing: border-box;*/
+    /*width: 200px;*/
+    /*background-color: #eee;*/
+    /*height: 100%;*/
+    /*top: 0;*/
+    /*left: -200px;*/
+    /*transition: left .2s;*/
+    /*z-index: 2;*/
+    /*-webkit-transform: translateZ(0);*/
+    /*-webkit-backface-visibility: hidden;*/
+}
+
+.menuBtn {
+
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}

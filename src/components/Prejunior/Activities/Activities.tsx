@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Activities.module.css"
-import {FilterValuesType} from "../App";
+import {FilterValuesType} from "../../../App";
 
 export type TasksType = {
     id: string

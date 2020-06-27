@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState, KeyboardEvent} from "react";
-import {InputNya} from "./InputNya";
-import {ButtonNya} from "./ButtonNya";
+import {InputNya} from "../../InputNya";
+import {ButtonNya} from "../../ButtonNya";
 
 
 export type NamesType = {

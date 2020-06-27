@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Message } from "./components/Message";
-import {Activities, TasksType} from "./components/Activities"
+import {TasksType} from "./components/PreJunior/Activities/Activities"
 import {v1} from "uuid";
-import {List, NamesType} from "./components/List";
+import {NamesType} from "./components/PreJunior/List/List";
+import {Navbar} from "./components/Navbar/Navbar";
+import {HashRouter, Route} from "react-router-dom";
+import {Junior} from "./components/Junior/Junior";
+import {JuniorPlus} from "./components/JuniorPlus/JuniorPlus";
+import {PreJunior} from "./components/PreJunior/PreJunior";
+
 
 
 export type FilterValuesType = "all" | "low" | "middle" | "hight";
@@ -71,32 +76,24 @@ function App() {
    }
 
   return (
-    <div className="App">
-     <div className={"Activity"}>
-      <Activities activities={activitiesForActivities}
+      <HashRouter>
+          <div className="App">
+              <div><Navbar/></div>
+              <Route path="/preJunior" render={ () =>   <PreJunior
+                  activities={activitiesForActivities}
                   removeActivity = {removeActivity}
                   changeFilter={changeFilter}
-      />
-     </div>
-      <div>
-          <List  names={names}
-                 removeNames={removeNames}
-                 addName={addName}
-                 greeting={greeting}
-          />
+                  names={names}
+                  removeNames={removeNames}
+                  addName={addName}
+                  greeting={greeting}
+              />}/>
+              <Route path="/Junior" render={ () => <Junior/>} />
+              <Route path="/Junior+" render={ () => <JuniorPlus/> }/>
 
+          </div>
+      </HashRouter>
 
-
-        <Message
-            name="Valerian Ehret"
-                 text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem
-    nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
-    Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit
-    lobortis nisl ut aliquip ex ea commodo consequat."
-                 time="12:05"
-        />
-      </div>
-    </div>
   );
 }
 
