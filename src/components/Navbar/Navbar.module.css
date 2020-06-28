@@ -1,27 +1,30 @@
 .menu {
     background-color: #d87d56;
     border-radius: 5px;
-    height: 35px;
-    line-height: 35px;
-    padding-left: 50px;
+    height: 90px;
+    line-height: 45px;
     position: fixed;
     width: 100%;
-    /*display: block;*/
-    /*position: fixed;*/
-    /*list-style:none;*/
-    /*padding: 10px;*/
-    /*margin: 0;*/
-    /*box-sizing: border-box;*/
-    /*width: 200px;*/
-    /*background-color: #eee;*/
-    /*height: 100%;*/
-    /*top: 0;*/
-    /*left: -200px;*/
-    /*transition: left .2s;*/
-    /*z-index: 2;*/
-    /*-webkit-transform: translateZ(0);*/
-    /*-webkit-backface-visibility: hidden;*/
+    transition-duration: 3s;
+    top:-40px;
+
+
+
 }
+
+
+.menu:hover {
+    top: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.menu:hover .navIcon{
+    opacity: 0;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
 
 .menuBtn {
 
@@ -36,4 +39,20 @@
 .link {
     text-decoration: none;
     color: white;
+}
+
+.navIcon {
+    border-bottom: 10px double white;
+    border-top: 3px solid white;
+    cursor: pointer;
+    /*float: left;*/
+    height: 4px;
+    /*margin-left: 5px;*/
+    margin-top: 10px;
+    /*padding-top: 4px;*/
+    transition: all 0.2s ease 0s;
+    width: 25px;
+    margin-left: 10px;
+    transition-duration: 5s;
+
 }

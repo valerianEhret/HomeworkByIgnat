@@ -7,7 +7,6 @@ import {NavLink} from "react-router-dom";
 export function Navbar() {
     return(
         <div className={classes.menu}>
-            <a className={classes.menuBtn}></a>
             <div className={classes.menuList}>
                 <div>
                     <NavLink className={classes.link} to="/preJunior">PreJunior</NavLink>
@@ -20,6 +19,7 @@ export function Navbar() {
                </div>
 
             </div>
+            <div className={classes.navIcon}></div>
         </div>
     )
 
