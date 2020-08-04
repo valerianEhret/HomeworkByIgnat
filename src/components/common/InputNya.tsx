@@ -1,4 +1,4 @@
-import React, {DetailedHTMLProps, InputHTMLAttributes, useState, KeyboardEvent} from 'react';
+import React, {DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent} from 'react';
 import classes from "./InputNya.module.css"
 
 export type InputNyaPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>

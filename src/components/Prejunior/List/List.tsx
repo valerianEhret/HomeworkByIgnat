@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState, KeyboardEvent} from "react";
-import {InputNya} from "../../InputNya";
-import {ButtonNya} from "../../ButtonNya";
+import {InputNya} from "../../common/InputNya";
+import {ButtonNya} from "../../common/ButtonNya";
 
 
 export type NamesType = {
@@ -61,7 +61,7 @@ export function List(props: ListPropsType) {
                           error={error}
                           onEnter={onEnter}
                 />
-                <ButtonNya onClick={onClickHandler}/>
+                <ButtonNya onClick={onClickHandler} title={"add new student"}/>
             </div>
             <div>
                 <ul>{props.names.map(el =>

@@ -8,6 +8,7 @@ import {HashRouter, Route} from "react-router-dom";
 import {Junior} from "./components/Junior/Junior";
 import {JuniorPlus} from "./components/JuniorPlus/JuniorPlus";
 import {PreJunior} from "./components/PreJunior/PreJunior";
+import {Burger} from "./components/PreJunior/Menu/Burger";
 
 
 
@@ -79,6 +80,7 @@ function App() {
       <HashRouter>
           <div className="App">
               <div><Navbar/></div>
+
               <Route path="/preJunior" render={ () =>   <PreJunior
                   activities={activitiesForActivities}
                   removeActivity = {removeActivity}

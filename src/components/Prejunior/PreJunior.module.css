@@ -1,3 +1,35 @@
 .wrapper {
-    /*background-color: rgb(80 121 93);*/
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    /*top:35px;*/
+    top: -35px;
+    left: 0;
+    z-index: 50;
+}
+
+.header:hover {
+    top: 35px;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+}
+
+.content {
+    padding: 100px 0 0 0;
+
 }

@@ -1,29 +1,30 @@
 .menu {
     background-color: #d87d56;
     border-radius: 5px;
-    height: 90px;
-    line-height: 45px;
+    height: 35px;
+    line-height: 35px;
     position: fixed;
     width: 100%;
     transition-duration: 3s;
-    top:-40px;
+    /*top:-40px;*/
+    z-index: 999;
 
 
 
 }
 
 
-.menu:hover {
-    top: 0;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-}
+/*.menu:hover {*/
+/*    top: 0;*/
+/*    transition-duration: 0.2s;*/
+/*    transition-timing-function: linear;*/
+/*}*/
 
-.menu:hover .navIcon{
-    opacity: 0;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-}
+/*.menu:hover .navIcon{*/
+/*    opacity: 0;*/
+/*    transition-duration: 0.2s;*/
+/*    transition-timing-function: linear;*/
+/*}*/
 
 
 .menuBtn {
@@ -41,18 +42,18 @@
     color: white;
 }
 
-.navIcon {
-    border-bottom: 10px double white;
-    border-top: 3px solid white;
-    cursor: pointer;
-    /*float: left;*/
-    height: 4px;
-    /*margin-left: 5px;*/
-    margin-top: 10px;
-    /*padding-top: 4px;*/
-    transition: all 0.2s ease 0s;
-    width: 25px;
-    margin-left: 10px;
-    transition-duration: 5s;
+/*.navIcon {*/
+/*    border-bottom: 10px double white;*/
+/*    border-top: 3px solid white;*/
+/*    cursor: pointer;*/
+/*  */
+/*    height: 4px;*/
 
-}
+/*    margin-top: 10px;*/
+/* */
+/*    transition: all 0.2s ease 0s;*/
+/*    width: 25px;*/
+/*    margin-left: 10px;*/
+/*    transition-duration: 5s;*/
+
+/*}*/
