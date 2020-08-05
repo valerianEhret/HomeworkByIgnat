@@ -7,9 +7,13 @@ export type InputNyaPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputE
 export function InputNya(props: InputNyaPropsType) {
     const {onEnter, error, ...restProps} = props;
     const style = props.error ? `${classes.inputNya} ${classes.error}` : `${classes.inputNya}`
+
+
     return (
         <>
-            <input onKeyPress={props.onEnter}   className={style}  {...restProps} type="text"/>
+            <input onKeyPress={props.onEnter}   className={style}
+                   {...restProps}
+                   type="text"/>
             <span className={classes.errorMessage}>{error}</span>
         </>
     );
