@@ -24,7 +24,7 @@ export function EditableSpan(props: EditableSpanPropsType) {
         <>
             {editMode ?
                 <InputNya value={props.value} onBlur={deActivateEditMode} autoFocus={true}  onChange={props.changeValue} onEnter={props.onEnter} /> :
-                // <input value={props.value} onBlur={deActivateEditMode} autoFocus={true} onChange={props.changeValue}   /> :
+
                 <span onDoubleClick={activateEditMode}><h4>{props.value}</h4></span>}
         </>
     );
