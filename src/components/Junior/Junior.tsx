@@ -14,6 +14,7 @@ type JuniorPropsType = {
 export type SelectValuesType = {
     id:string,
     selectValue:string
+    selected:boolean
 }
 
 export type RadioValueType = {
@@ -25,36 +26,39 @@ export type RadioValueType = {
 
 export function Junior(props:JuniorPropsType) {
 
-    const [value, setValue] = useState("double click to change title");
-    const [error, setError] = useState<string>("")
+
+// Select
+    let [option, setOption] = useState<Array<SelectValuesType>>([
+        {id:v1(),selectValue:"Minsk", selected:false},
+        {id:v1(),selectValue:"Brest", selected:true},
+        {id:v1(),selectValue:"Grodno", selected:false},
+        {id:v1(),selectValue:"Mogilev", selected:false},
+    ])
+
+const setSelectButtonSelected = (arr:Array<SelectValuesType>) => {
+        setOption(arr)
+}
 
 
- const options:Array<SelectValuesType> = [
-     {id:v1(),selectValue:"Novosibirsk"},
-     {id:v1(),selectValue:"Paderborn"},
-     {id:v1(),selectValue:"Bielefeld"},
- ];
-
+// Input Radio
     let [radioValue, setRadioValue] = useState(
         [
             {id:v1(), name:"Minsk", value:"Minsk", checked:false},
-            {id:v1(), name:"Brest", value:"Brest",checked:false},
-            {id:v1(), name:"Grodno",value:"Grodno", checked:false},
+            {id:v1(), name:"Bobruisk", value:"Brest",checked:false},
+            {id:v1(), name:"Vitebsk",value:"Grodno", checked:false},
+            {id:v1(), name:"Gomel",value:"Grodno", checked:false},
         ]
     )
-
 
 const setRadioButtonSelected =(arr: Array<RadioValueType>)=> {
     setRadioValue(arr)
 }
 
-    
+// Editablespan
 
-    let [optionValue, setOptionValue] = useState('Paderborn')
+    const [value, setValue] = useState("double click to change title");
 
-    const changeOptionValue = (e:ChangeEvent<HTMLSelectElement>) => {
-        setOptionValue(e.currentTarget.value)
-    }
+
 
     const changeValue = (e:ChangeEvent<HTMLInputElement>) => {
         setValue(e.currentTarget.value)
@@ -68,7 +72,7 @@ const setRadioButtonSelected =(arr: Array<RadioValueType>)=> {
                 setValue("");
             }
         } else {
-            setError("Title is requaried")
+
         }
     }
 
@@ -101,8 +105,14 @@ const setRadioButtonSelected =(arr: Array<RadioValueType>)=> {
             <EditableSpan value={value} changeValue={changeValue} onEnter={onEnter}/>
             <ButtonNya title={"Save"} onClick={saveStateHandler}/>
             <ButtonNya title={"Restore"} onClick={restoreStateHandler}/>
-            <Select options={options} value={optionValue} changeOptionValue={changeOptionValue} />
-            <Radio value={radioValue}  setRadioButtonSelected={setRadioButtonSelected}/>
+            <Select
+                option={option}
+                setSelectButtonSelected={setSelectButtonSelected}
+            />
+            <Radio
+                value={radioValue}
+                setRadioButtonSelected={setRadioButtonSelected}
+            />
         </div>
     )
 
