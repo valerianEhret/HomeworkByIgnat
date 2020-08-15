@@ -9,6 +9,7 @@ import {Junior} from "./components/Junior/Junior";
 import {JuniorPlus} from "./components/JuniorPlus/JuniorPlus";
 import {PreJunior} from "./components/PreJunior/PreJunior";
 import {Burger} from "./components/PreJunior/Menu/Burger";
+import {ManType} from "./Reducer/homeWorkReducer";
 
 
 
@@ -18,6 +19,16 @@ export type FilterValuesType = "all" | "low" | "middle" | "hight";
 
 
 function App() {
+
+    const peopleState:Array<ManType> = [
+        {id:v1(), name: "Valerian", age:33},
+        {id:v1(), name: "Mark", age:6},
+        {id:v1(), name: "Zoe", age:4},
+        {id:v1(), name: "Natalia", age:33},
+    ]
+
+
+
 
     let [names,setNames ] = useState<Array<NamesType>>(
         []);
@@ -90,7 +101,9 @@ function App() {
                   addName={addName}
                   greeting={greeting}
               />}/>
-              <Route path="/Junior" render={ () => <Junior/>} />
+              <Route path="/Junior" render={ () => <Junior
+                  peopleState={peopleState}
+              />} />
               <Route path="/Junior+" render={ () => <JuniorPlus/> }/>
 
           </div>

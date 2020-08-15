@@ -6,9 +6,11 @@ import {ButtonNya} from "../common/ButtonNya";
 import {Select} from "../common/Select";
 import {v1} from "uuid";
 import {Radio} from "../common/Radio";
+import {People} from "../../Reducer/People";
+import {ManType} from "../../Reducer/homeWorkReducer";
 
 type JuniorPropsType = {
-
+    peopleState:Array<ManType>
 }
 
 export type SelectValuesType = {
@@ -113,6 +115,8 @@ const setRadioButtonSelected =(arr: Array<RadioValueType>)=> {
                 value={radioValue}
                 setRadioButtonSelected={setRadioButtonSelected}
             />
+
+            <People peopleState={props.peopleState}/>
         </div>
     )
 
