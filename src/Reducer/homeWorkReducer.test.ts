@@ -1,4 +1,4 @@
-import {checkOver18, hwReducer, ManType, sortUpAC, sortUpDown} from "./homeWorkReducer";
+import {checkOver18AC, hwReducer, ManType, sortUpAC, sortUpDownAC} from "./homeWorkReducer";
 import {v1} from "uuid";
 
 const startState:Array<ManType> = [
@@ -20,7 +20,7 @@ test('array should be sorted by name in ascending order',()=> {
 
 test('array should be sorted by name in descending order',()=> {
 
-    const endState = hwReducer(startState, sortUpDown())
+    const endState = hwReducer(startState, sortUpDownAC())
 
     expect(endState[3].name).toBe("Mark");
     expect(endState[2].name).toBe("Natalia");
@@ -30,7 +30,7 @@ test('array should be sorted by name in descending order',()=> {
 
 test('array should be sorted by age over 18',()=> {
 
-    const endState = hwReducer(startState, checkOver18())
+    const endState = hwReducer(startState, checkOver18AC())
 
     expect(endState.length).toBe(2);
     expect(endState[1].name).toBe("Natalia");

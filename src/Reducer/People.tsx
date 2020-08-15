@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {checkOver18, hwReducer, ManType, sortUpAC, sortUpDown} from "./homeWorkReducer";
+import {checkOver18AC, hwReducer, ManType, sortUpAC, sortUpDownAC} from "./homeWorkReducer";
 
 
 type PeoplePropsType = {
@@ -12,8 +12,8 @@ export function People(props: PeoplePropsType) {
     let people = props.peopleState
 
     if (sort === "up") people = hwReducer(props.peopleState, sortUpAC())
-    if (sort === "down") people = hwReducer(props.peopleState, sortUpDown())
-    if (sort === "18") people = hwReducer(props.peopleState, checkOver18())
+    if (sort === "down") people = hwReducer(props.peopleState, sortUpDownAC())
+    if (sort === "18") people = hwReducer(props.peopleState, checkOver18AC())
 
 
     return (

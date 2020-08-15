@@ -7,13 +7,13 @@ export type ManType = {
 }
 
 
-export type ActionType = {
-    type: string
-    payload: any
-}
+// export type ActionType = {
+//     type: string
+//     payload: any
+// }
 
 export const hwReducer =
-    (state: Array<ManType>, action: ActionType) => {
+    (state: Array<ManType>, action: ActionTypes) => {
         switch (action.type) {
             case "SORT":
                 if (action.payload === "up") {
@@ -38,14 +38,19 @@ export const hwReducer =
         }
     };
 
+type ActionTypes = ReturnType<typeof sortUpAC> |
+                   ReturnType<typeof sortUpDownAC> |
+                   ReturnType<typeof checkOver18AC>
+
 export const sortUpAC = () => {
-    return {type: 'SORT', payload: 'up'}
+    return {type: 'SORT',
+        payload: 'up'}
 }
 
-export const sortUpDown = () => {
+export const sortUpDownAC = () => {
     return {type: 'SORT', payload: 'down'}
 }
 
-export const checkOver18 = () => {
+export const checkOver18AC = () => {
     return {type: 'CHECK', payload: '18'}
 }
