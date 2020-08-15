@@ -37,3 +37,15 @@ export const hwReducer =
             default:return  state
         }
     };
+
+export const sortUpAC = () => {
+    return {type: 'SORT', payload: 'up'}
+}
+
+export const sortUpDown = () => {
+    return {type: 'SORT', payload: 'down'}
+}
+
+export const checkOver18 = () => {
+    return {type: 'CHECK', payload: '18'}
+}
