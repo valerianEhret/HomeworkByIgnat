@@ -3,9 +3,10 @@ import {checkOver18, hwReducer, ManType, sortUpAC, sortUpDown} from "./homeWorkR
 
 
 type PeoplePropsType = {
-    peopleState:Array<ManType>
+    peopleState: Array<ManType>
 }
-export function People(props:PeoplePropsType) {
+
+export function People(props: PeoplePropsType) {
 
     const [sort, setSort] = useState("")
     let people = props.peopleState
@@ -15,16 +16,15 @@ export function People(props:PeoplePropsType) {
     if (sort === "18") people = hwReducer(props.peopleState, checkOver18())
 
 
+    return (
+        <div>
+            <ul>
+                {people.map(el => <li>{`name: ${el.name} age: ${el.age}`}</li>)}
+            </ul>
 
-return (
-    <div>
-        <ul>
-            {people.map(el => <li>{`name: ${el.name} age: ${el.age}`}</li>)}
-        </ul>
-
-        <button onClick={() => setSort("up")}>sort by name up</button>
-        <button onClick={()=>setSort("down")}>sort by name down</button>
-        <button onClick={()=>setSort("18")}>sort by age over 18</button>
-    </div>
-)
+            <button onClick={() => setSort("up")}>sort by name up</button>
+            <button onClick={() => setSort("down")}>sort by name down</button>
+            <button onClick={() => setSort("18")}>sort by age over 18</button>
+        </div>
+    )
 }
