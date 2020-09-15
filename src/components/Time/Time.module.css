@@ -1,0 +1,30 @@
+.display {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(150,181,153);
+    font-size: 56px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px black solid;
+    background-color: rgb(43,48,59);
+
+}
+
+.date {
+    color: rgb(43,48,59);
+    font-size: 16px;
+}
+
+.display:hover  .date {
+    color:  rgb(150,181,153);
+}
+
+.bottomField {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(150,181,153);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px black solid;
+    background-color: rgb(43,48,59);
+}

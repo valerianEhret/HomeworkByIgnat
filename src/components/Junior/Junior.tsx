@@ -8,6 +8,7 @@ import {v1} from "uuid";
 import {Radio} from "../common/Radio";
 import {People} from "../../Reducer/People";
 import {ManType} from "../../Reducer/homeWorkReducer";
+import {Time} from "../Time/Time";
 
 type JuniorPropsType = {
     peopleState:Array<ManType>
@@ -117,6 +118,8 @@ const setRadioButtonSelected =(arr: Array<RadioValueType>)=> {
             />
 
             <People peopleState={props.peopleState}/>
+
+            <Time/>
         </div>
     )
 
